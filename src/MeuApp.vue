@@ -2,7 +2,6 @@
   <div id="App">
     <v-app>
       <CadastroDeUsuario/>
-      <AppTopBar/>
       <v-main>
         <router-view />
       </v-main>
@@ -12,13 +11,10 @@
 
 <script>
 import CadastroDeUsuario from './components/CadastroDeUsuario'
-import AppTopBar from "./components/AppTopBar"
-
 export default {
   name: "App",
   components: {
     CadastroDeUsuario,
-    AppTopBar,
   },
 };
 </script>
