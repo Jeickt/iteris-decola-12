@@ -25,7 +25,7 @@
               </v-list-item>
             </router-link>
 
-            <router-link to="/ListaBlocos/:uf" >
+            <router-link to="/ListaBlocos" >
               <v-list-item>
                 <v-list-item-title>Blocos de Carnaval</v-list-item-title>
               </v-list-item>
