@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../views/HomePage.vue'
+import ListaBlocos from '../views/ListaBlocos.vue'
+import ProductPage from '../views/ProductPage.vue'
+import CadastroDeUsuario from '../views/CadastroDeUsuario.vue'
+import CompraCarrinho from '../views/CompraCarrinho.vue'
+import HappyPassport from '../views/HappyPassport.vue'
+
 
 Vue.use(VueRouter)
 
@@ -8,28 +14,34 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: MeuHome,
+    component: HomePage,
   },
   {
-    path: '/',
-    name: 'home',
-    component: MeuHome,
+    path: '/ListaBlocos',
+    name: 'ListaBlocos',
+    component: ListaBlocos,
   },
   {
-    path: '/',
-    name: 'home',
-    component: MeuHome,
+    path: '/ProductPage',
+    name: 'ProductPage',
+    component: ProductPage,
   },
   {
-    path: '/',
-    name: 'home',
-    component: MeuHome,
+    path: '/CadastroDeUsuario',
+    name: 'CadastroDeUsuario',
+    component: CadastroDeUsuario,
   },
   {
-    path: '/',
-    name: 'home',
-    component: MeuHome,
+    path: '/CompraCarrinho',
+    name: 'CompraCarrinho',
+    component: CompraCarrinho,
   },
+  {
+    path: '/HappyPassport',
+    name: 'HappyPassport',
+    component: HappyPassport
+  }
+]
 
 const router = new VueRouter({
   mode: 'history',
