@@ -15,7 +15,7 @@ export default {
     name: "productPage",
     data() {
         return {
-            select: "Mudança do Garcia",
+            select: this.$route.params.name,
             listaDeBlocos: []
         }
     },
