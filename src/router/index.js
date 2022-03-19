@@ -22,9 +22,10 @@ const routes = [
     props: true,
   },
   {
-    path: '/ProductPage',
+    path: '/ProductPage/:name',
     name: 'ProductPage',
     component: ProductPage,
+    props: true,
   },
   {
     path: '/CadastroDeUsuario',
