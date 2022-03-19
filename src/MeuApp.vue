@@ -1,18 +1,22 @@
 <template>
-  <div>
-    <HomePage/>
-    <router-view />   
+  <div id="App">
+    <v-app>
+      <AppTopBar/>
+      <v-main>
+        <router-view/>
+      </v-main>
+    </v-app>  
   </div>
 </template>
 
 <script>
-import HomePage from './views/HomePage.vue'
+import AppTopBar from './components/AppTopBar'
 
 export default {
   name: "App",
   components: {
-    HomePage,
+    AppTopBar,
   },
- 
-};
+}
+
 </script>
