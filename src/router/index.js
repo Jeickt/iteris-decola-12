@@ -13,40 +13,41 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage
+    component: HomePage,
   },
   {
     path: '/ListaBlocos/:uf',
     name: 'ListaBlocos',
     component: ListaBlocos,
-    props: true
+    props: true,
   },
   {
-    path: '/ProductPage',
+    path: '/ProductPage/:name',
     name: 'ProductPage',
-    component: ProductPage
+    component: ProductPage,
+    props: true,
   },
   {
     path: '/CadastroDeUsuario',
     name: 'CadastroDeUsuario',
-    component: CadastroDeUsuario
+    component: CadastroDeUsuario,
   },
   {
     path: '/CompraCarrinho',
     name: 'CompraCarrinho',
-    component: CompraCarrinho
+    component: CompraCarrinho,
   },
   {
     path: '/HappyPassport',
     name: 'HappyPassport',
-    component: HappyPassport
-  }
+    component: HappyPassport,
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router
