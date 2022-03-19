@@ -4,7 +4,7 @@
           app
           dark
         >
-          <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
          
         </v-app-bar>
         <v-navigation-drawer
@@ -48,7 +48,7 @@
    name: 'AppTopBar',
    data(){
      return {
-       drawer: true,
+       drawer: false,
         group: null
      }
    }
