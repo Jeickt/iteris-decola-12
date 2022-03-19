@@ -1,10 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MeuHome from '../views/MeuHome.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: MeuHome,
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: MeuHome,
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: MeuHome,
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: MeuHome,
+  },
   {
     path: '/',
     name: 'home',
