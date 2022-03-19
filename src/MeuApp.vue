@@ -1,7 +1,7 @@
 <template>
   <div id="App">
     <v-app>
-      <AppTopBar />
+      <AppTopBar/>
       <v-main>
         <router-view />
       </v-main>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AppTopBar from "./components/AppTopBar";
+import AppTopBar from "./components/AppTopBar"
 
 export default {
   name: "App",
