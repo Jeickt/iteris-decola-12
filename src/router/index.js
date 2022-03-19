@@ -7,7 +7,6 @@ import CadastroDeUsuario from '../views/CadastroDeUsuario.vue'
 import CompraCarrinho from '../views/CompraCarrinho.vue'
 import HappyPassport from '../views/HappyPassport.vue'
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -17,9 +16,10 @@ const routes = [
     component: HomePage,
   },
   {
-    path: '/ListaBlocos',
+    path: '/ListaBlocos/:uf',
     name: 'ListaBlocos',
     component: ListaBlocos,
+    props: true,
   },
   {
     path: '/ProductPage',
@@ -39,14 +39,14 @@ const routes = [
   {
     path: '/HappyPassport',
     name: 'HappyPassport',
-    component: HappyPassport
-  }
+    component: HappyPassport,
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router
