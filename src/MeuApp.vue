@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+a {
+  text-decoration: none;
+}
 @keyframes slide-in {
   from {
     transform: translateY(-30px);

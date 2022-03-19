@@ -1,12 +1,10 @@
 <template>
   <v-layout column wrap>
-    <div>
-      <BarraDeBusca
-        :estados="estados"
-        @nomeDoBlocoSelecionado="selecaoDoNomeDoBloco"
-        @estadoSelecionado="selecaoDoEstado"
-      />
-    </div>
+    <BarraDeBusca
+      :estados="estados"
+      @nomeDoBlocoSelecionado="selecaoDoNomeDoBloco"
+      @estadoSelecionado="selecaoDoEstado"
+    />
     <BlocoResumido
       v-for="bloco of blocos"
       :key="bloco.name"
@@ -26,11 +24,9 @@ export default {
     return {
       apiBlocos: [],
       blocos: [],
-      primeiraRenderizacao: false,
       estados: [],
       estado: "",
       texto: "",
-      uf: this.$route.params.uf,
     };
   },
   created() {
@@ -73,14 +69,7 @@ export default {
   },
   watch: {
     apiBlocos() {
-      if (!this.primeiraRenderizacao) {
-        this.blocos = this.apiBlocos.filter(
-          (b) => b.address.slice(-2) === this.uf
-        );
-        this.primeiraRenderizacao = true;
-      } else {
-        this.blocos = this.apiBlocos;
-      }
+      this.blocos = this.apiBlocos;
       const set = new Set();
       this.apiBlocos.forEach((b) => set.add(b.address.slice(-2)));
       this.estados = Array.from(set).sort(function (a, b) {
