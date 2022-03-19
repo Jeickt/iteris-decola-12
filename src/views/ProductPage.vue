@@ -10,26 +10,31 @@
         <p>{{ blocoFilter.description }}</p>
         <h2>Vem pra festa:</h2>
         <p>Junto com seu Abadá, você ganha um Kit festa pra arrasar na folia: </p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>A cerveja que você preferir :)</th>
-                </tr>
-                <tr>
-                   <th>Amendoim</th>
-                </tr>
-                <tr>
-                    <th>Confets</th>
-                </tr>
-                <tr>
-                    <th>Espuma</th>
-                </tr>
-                <tr>
-                    <th>Fitilho</th>
-                </tr>
-            
-            </tbody>
-        </table>
+        <ul>
+            <li>A cerveja que você preferir :)</li>
+            <li>Amendoim</li>
+            <li>Confetes</li>
+            <li>Espuma</li>
+            <li>Fitilho</li>
+        </ul>
+        <table class="table">
+                <thead class="table">
+                    <tr>
+                        <th>Bloco</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody class="table">
+                    <tr>
+                        <td>Vip</td>
+                        <td>R$ 45,00</td>
+                    </tr>
+                    <tr>
+                         <td>Camarote</td>
+                        <td>R$ 145,00</td>
+                    </tr>
+                </tbody>
+            </table>
     </v-container>    
 </template>
 
@@ -61,6 +66,8 @@ export default {
 </script>
 
 <style scoped>
-
-
+.table{
+    border: 1px solid black;
+    border-spacing: 15px;
+}
 </style>

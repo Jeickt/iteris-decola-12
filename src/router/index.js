@@ -4,7 +4,6 @@ import HomePage from '../views/HomePage.vue'
 import ListaBlocos from '../views/ListaBlocos.vue'
 import ProductPage from '../views/ProductPage.vue'
 import CadastroDeUsuario from '../views/CadastroDeUsuario.vue'
-import CompraCarrinho from '../views/CompraCarrinho.vue'
 import HappyPassport from '../views/HappyPassport.vue'
 
 Vue.use(VueRouter)
@@ -30,11 +29,6 @@ const routes = [
     path: '/CadastroDeUsuario',
     name: 'CadastroDeUsuario',
     component: CadastroDeUsuario,
-  },
-  {
-    path: '/CompraCarrinho',
-    name: 'CompraCarrinho',
-    component: CompraCarrinho,
   },
   {
     path: '/HappyPassport',
