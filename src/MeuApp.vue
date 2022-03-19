@@ -1,7 +1,6 @@
 <template>
   <div id="App">
     <v-app>
-      <CadastroDeUsuario/>
       <AppTopBar/>
       <v-main>
         <router-view />
@@ -11,19 +10,20 @@
 </template>
 
 <script>
-import CadastroDeUsuario from './components/CadastroDeUsuario'
 import AppTopBar from "./components/AppTopBar"
 
 export default {
   name: "App",
   components: {
-    CadastroDeUsuario,
     AppTopBar,
   },
 };
 </script>
 
 <style>
+a {
+  text-decoration: none;
+}
 @keyframes slide-in {
   from {
     transform: translateY(-30px);

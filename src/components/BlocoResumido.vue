@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mx-auto my-12">
+  <v-container class="mx-auto v-container my-12">
     <v-card :loading="loading" max-width="250">
       <router-link :to="{ name: 'ProductPage', params: { name: bloco.name } }">
         <template slot="progress">
@@ -56,6 +56,12 @@ export default {
 </script>
 
 <style scoped>
+.v-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .descricaoCurta {
   overflow: hidden;
   text-overflow: ellipsis;
