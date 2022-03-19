@@ -7,34 +7,33 @@ import CadastroDeUsuario from '../views/CadastroDeUsuario.vue'
 import CompraCarrinho from '../views/CompraCarrinho.vue'
 import HappyPassport from '../views/HappyPassport.vue'
 
-
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage,
+    component: HomePage
   },
   {
     path: '/ListaBlocos',
     name: 'ListaBlocos',
-    component: ListaBlocos,
+    component: ListaBlocos
   },
   {
     path: '/ProductPage',
     name: 'ProductPage',
-    component: ProductPage,
+    component: ProductPage
   },
   {
     path: '/CadastroDeUsuario',
     name: 'CadastroDeUsuario',
-    component: CadastroDeUsuario,
+    component: CadastroDeUsuario
   },
   {
     path: '/CompraCarrinho',
     name: 'CompraCarrinho',
-    component: CompraCarrinho,
+    component: CompraCarrinho
   },
   {
     path: '/HappyPassport',
