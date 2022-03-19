@@ -1,52 +1,64 @@
-<template>
-  <v-card class="overflow-hidden">
-    <v-app-bar
-      absolute
-      color="#fcb69f"
-      dark
-      shrink-on-scroll
-      src="https://images.pexels.com/photos/796606/pexels-photo-796606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      
-    >
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to bottom, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-        ></v-img>
-      </template>
+ <template>
+   <div class="app-top-bar">
+     <v-app-bar
+          app
+          dark
+        >
+          <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+         
+        </v-app-bar>
+        <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+        >
+          <v-list
+            nav
+            dense
+          >
+            <v-list-item-group
+              v-model="group"
+            >
+            <router-link to="/">
+              <v-list-item>
+                <v-list-item-title>Início</v-list-item-title>
+              </v-list-item>
+            </router-link>
 
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <router-link to="/ListaBlocos/:uf" >
+              <v-list-item>
+                <v-list-item-title>Blocos de Carnaval</v-list-item-title>
+              </v-list-item>
+            </router-link>
 
-      <v-app-bar-title>Title</v-app-bar-title>
+            <router-link to='/CadastroDeUsuario' >
+              <v-list-item>
+                <v-list-item-title>Cadastro</v-list-item-title>
+              </v-list-item>
+            </router-link>
 
-      <v-spacer></v-spacer>
+            </v-list-item-group>
+          </v-list>
+        </v-navigation-drawer>
+   </div>
+ </template>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+ <script>
+ export default {
+   name: 'AppTopBar',
+   data(){
+     return {
+       drawer: true,
+        group: null
+     }
+   }
+   
+ }
+ </script>
 
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-2"
-      class="overflow-y-auto"
-      max-height="600"
-    >
-      <v-container style="height: 120px;"></v-container>
-    </v-sheet>
-  </v-card>
-</template>
-
-<script>
-export default {};
-</script>
-
-<style scoped>
-
-</style>
+ <style scoped>
+.app-top-bar a{
+  text-decoration: none;
+}
+ 
+ </style>

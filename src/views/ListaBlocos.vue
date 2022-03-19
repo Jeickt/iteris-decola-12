@@ -1,10 +1,12 @@
 <template>
-  <v-layout row wrap>
-    <BarraDeBusca
-      :estados="estados"
-      @nomeDoBlocoSelecionado="selecaoDoNomeDoBloco"
-      @estadoSelecionado="selecaoDoEstado"
-    />
+  <v-layout column wrap>
+    <div>
+      <BarraDeBusca
+        :estados="estados"
+        @nomeDoBlocoSelecionado="selecaoDoNomeDoBloco"
+        @estadoSelecionado="selecaoDoEstado"
+      />
+    </div>
     <BlocoResumido
       v-for="bloco of blocos"
       :key="bloco.name"
