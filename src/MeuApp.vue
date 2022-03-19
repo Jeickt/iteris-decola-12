@@ -1,20 +1,20 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container>
-        <transition name="slide" mode="out-in">
-          <router-view></router-view>
-        </transition>
-      </v-container>
-    </v-main>
-  </v-app>
+  <div>
+    <router-view>
+    <HomePage/>
+
+    </router-view>      
+  </div>
 </template>
 
 <script>
+import HomePage from './views/HomePage.vue'
+
 export default {
   name: "App",
-  data: () => ({
-    //
-  }),
+  components: {
+    HomePage,
+  },
+ 
 };
 </script>

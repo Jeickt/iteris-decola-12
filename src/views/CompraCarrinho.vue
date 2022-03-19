@@ -1,10 +1,13 @@
 <template>
-  <h1>Início</h1>
+    <h1>Lista</h1>
 </template>
 
 <script>
-export default {};
+export default {
+    name: "ListaBlocos"
+}
 </script>
 
 <style scoped>
+
 </style>
