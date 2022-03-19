@@ -4,7 +4,7 @@
           app
           dark
         >
-          <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
          
         </v-app-bar>
         <v-navigation-drawer
@@ -25,7 +25,7 @@
               </v-list-item>
             </router-link>
 
-            <router-link to="/ListaBlocos/:uf" >
+            <router-link to="/ListaBlocos" >
               <v-list-item>
                 <v-list-item-title>Blocos de Carnaval</v-list-item-title>
               </v-list-item>
@@ -48,7 +48,7 @@
    name: 'AppTopBar',
    data(){
      return {
-       drawer: true,
+       drawer: false,
         group: null
      }
    }
