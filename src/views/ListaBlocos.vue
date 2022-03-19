@@ -24,9 +24,11 @@ export default {
     return {
       apiBlocos: [],
       blocos: [],
+      primeiraRenderizacao: false,
       estados: [],
       estado: "",
       texto: "",
+      uf: this.$route.params.uf,
     };
   },
   created() {
@@ -69,7 +71,14 @@ export default {
   },
   watch: {
     apiBlocos() {
-      this.blocos = this.apiBlocos;
+      if (!this.primeiraRenderizacao) {
+        this.blocos = this.apiBlocos.filter(
+          (b) => b.address.slice(-2) === this.uf
+        );
+        this.primeiraRenderizacao = true;
+      } else {
+        this.blocos = this.apiBlocos;
+      }
       const set = new Set();
       this.apiBlocos.forEach((b) => set.add(b.address.slice(-2)));
       this.estados = Array.from(set).sort(function (a, b) {

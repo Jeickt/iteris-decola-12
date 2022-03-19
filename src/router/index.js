@@ -16,9 +16,10 @@ const routes = [
     component: HomePage
   },
   {
-    path: '/ListaBlocos',
+    path: '/ListaBlocos/:uf',
     name: 'ListaBlocos',
-    component: ListaBlocos
+    component: ListaBlocos,
+    props: true
   },
   {
     path: '/ProductPage',
