@@ -17,16 +17,24 @@
    <input v-model="cadastro" 
    placeholder="data de nascimento" 
    type="date">
-   <v-btn block>
-    Enviar
-  </v-btn>
-
+   <div id="botao">
+    <button v-on:click="enviar('Enviado com sucesso')">Enviar</button>
+  </div>
    </div>
 </template>
 <script>
 export default {
-   name:'CadastroDeUsuarios'
-    
+   name:'CadastroDeUsuarios',
+data(){
+    return{ 
+        enviado: 'Cadastro realizado com sucesso!'
+    }
+},
+methods: {
+    enviar: function (message) {
+      alert(message)
+    }
+  }
 }
 </script>
 <style scoped>
